@@ -1,7 +1,7 @@
 {'targets': [{
     'target_name': 'leveldb'
   , 'variables': {
-        'ldbversion': '1.10.0'
+        'ldbversion': 'basho'
     }
   , 'type': 'static_library'
 		# Overcomes an issue with the linker and thin .a files on SmartOS
@@ -183,5 +183,10 @@
       , 'leveldb-<(ldbversion)/util/options.cc'
       , 'leveldb-<(ldbversion)/util/random.h'
       , 'leveldb-<(ldbversion)/util/status.cc'
+
+      , 'leveldb-<(ldbversion)/util/bloom2.cc'
+      , 'leveldb-<(ldbversion)/util/murmurhash.cc'
+      , 'leveldb-<(ldbversion)/util/perf_count.cc'
+
     ]
 }]}
